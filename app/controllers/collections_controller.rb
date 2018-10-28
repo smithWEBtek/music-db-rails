@@ -3,7 +3,10 @@ class CollectionsController < ApplicationController
  	
 	def index
 		@collections = Collection.all.sort { |a,b| a.name <=> b.name }
-		render json: @collections
+		respond_to do |format|
+			format.html
+			format.json
+		end
 	end
  
 	def show

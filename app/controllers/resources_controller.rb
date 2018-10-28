@@ -3,7 +3,10 @@ class ResourcesController < ApplicationController
  	
 	def index
 		@resources = Resource.all.sort { |a,b| a.name <=> b.name }
-		render json: @resources
+		respond_to do |format|
+			format.html
+			format.json
+		end
 	end
  
 	def show
