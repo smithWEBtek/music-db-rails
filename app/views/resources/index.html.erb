@@ -1,6 +1,4 @@
-<h1>Resources Index</h1>
-<ul>
-	<% @resources.each do |resource| %>
-		<li><%= resource.name %></li>
+<h2>Resources Index</h2>
+<% @resources.each do |resource| %>
+	<p><%= link_to resource.name, resource_path(resource) %></p>
 <% end%>
-</ul>

@@ -10,7 +10,11 @@ class SongsController < ApplicationController
 	end
 	
 	def show
-		render json: @song
+
+		respond_to do |format|
+			format.html
+			format.json
+		end
 	end
 
 	def create
