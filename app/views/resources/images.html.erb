@@ -1,0 +1,11 @@
+<div class='row'>
+	<div class='col-lg-12'>
+	<ul>
+	<% @images.each do |image| %>
+		<%= render partial: 'image_box', locals: {upload: image} %>
+		<hr />
+		<% end %>
+	</ul>
+		</div>
+</div>
+ 

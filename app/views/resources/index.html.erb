@@ -1,0 +1,17 @@
+<% @resources.each do |res| %>
+	<ul>
+	<li>public_id: <%= res["public_id"] %></li>
+	<li>format: <%= res["format"] %></li>
+	<li>created_at: <%= res["created_at"] %></li>
+	<li>width: <%= res["width"] %></li>
+	<li>height: <%= res["height"] %></li>
+	<li>url: <%= link_to 'show_image', res["url"] %></li>
+	<li>secure_url: <%= res["secure_url"] %></li>
+	<li><%= link_to 'Delete resource', resources_path(res['public_id']), {resource: res,  method: 'DELETE'}%>
+ 
+	</li>
+	<hr />
+	</ul>
+	<% end %>
+<hr />
+ 

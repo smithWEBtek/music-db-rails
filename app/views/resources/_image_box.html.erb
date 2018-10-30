@@ -1,0 +1,7 @@
+<div>
+  <div class="public_id">
+    <%= upload["public_id"] %>
+		<%= image_tag(upload["url"]) %>
+		<%= link_to 'Delete image', resource_path(upload["public_id"]) + '/destroy', resource: upload,  method: 'DELETE' %>
+	</div>
+</div>
