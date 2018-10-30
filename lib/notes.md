@@ -3,9 +3,9 @@
 
 ## Data Model
 	Song
-		:title, :category_ids, :resources
+		:title, :category_ids, :docs
 
-		has_many :resources
+		has_many :docs
 		has_many :song_categories
 		has_many :categories, through: :song_categories
 
@@ -36,7 +36,7 @@
 		
 		class CreateResources < ActiveRecord::Migration[5.1]
 		def change
-			create_table :resources do |t|
+			create_table :docs do |t|
 				t.string :title
 				t.string :category
 				t.string :description
@@ -54,7 +54,7 @@
 		:name, :song_ids
 
 		has_many :songs
-		has_many :resources, through: :songs
+		has_many :docs, through: :songs
 
 	SongCollection
 		belongs_to :song

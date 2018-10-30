@@ -1,4 +1,4 @@
-class ResourceSerializer < ActiveModel::Serializer
+class DocSerializer < ActiveModel::Serializer
   attributes :id, :song_id, :name, :description, :format, :location
 
 end

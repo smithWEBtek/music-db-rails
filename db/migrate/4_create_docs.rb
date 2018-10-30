@@ -1,6 +1,6 @@
-class CreateResources < ActiveRecord::Migration[5.1]
+class CreateDocs < ActiveRecord::Migration[5.1]
   def change
-    create_table :resources do |t|
+    create_table :docs do |t|
 			t.integer :song_id
       t.string :name
       t.string :description

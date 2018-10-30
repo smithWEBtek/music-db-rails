@@ -1,4 +1,4 @@
 class SongSerializer < ActiveModel::Serializer
-	attributes :id, :title, :categories, :resources
-	has_many :resources
+	attributes :id, :title, :categories, :docs
+	has_many :docs
 end

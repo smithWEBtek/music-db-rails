@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-	before_action :set_song, only: [:show, :update, :destroy, :resources, :collections]
+	before_action :set_song, only: [:show, :update, :destroy, :docs, :collections]
 	
 	def index
 		@songs = Song.all.sort { |a,b| a.title <=> b.title }
@@ -40,12 +40,12 @@ class SongsController < ApplicationController
 		render json: { message: 'song deleted' }
 	end
 	
-	def resources
-		@resources = @song.resources
-		if @resources
-			render json: @resources
+	def docs
+		@docs = @song.docs
+		if @docs
+			render json: @docs
 		else
-			render json: { errors: { message: 'song resources NOT found' }}
+			render json: { errors: { message: 'song docs NOT found' }}
 		end
 	end
 	

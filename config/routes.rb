@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 	resources :songs
 	resources :song_collections
 	resources :collections
-	resources :resources
+	resources :docs
 end

@@ -1,3 +1,10 @@
 
 <h2><%= @song.title %></h2>
-<%= render partial: 'song_resources', locals: { resources: @song.resources } %>
+
+<% @song.docs.each do |doc| %>
+	<%= link_to doc.name, doc_path(doc) %><br/>
+	<% if doc.format === 'pdf' %> 
+		<h1><%= doc.name %> to be rendered from Cloudinary</h1>
+
+	<% end %>
+<% end %>
